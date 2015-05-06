@@ -1,0 +1,51 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+.aligncenter {
+  display: block;
+  margin: (@line-height-computed / 2) auto;
+}
+.alignleft,
+.alignright {
+  margin-bottom: (@line-height-computed / 2);
+}
+figure.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+@media (min-width: @screen-sm-min) {
+  // Only float images if not on an extra small device like smartphones
+  .alignleft {
+    float: left;
+    margin-right: (@line-height-computed / 2);
+  }
+  .alignright {
+    float: right;
+    margin-left: (@line-height-computed / 2);
+  }
+}
+@media (min-width: @screen-md-min){
+  .nav{
+    float: right !important;
+  }
+}
+@media (max-width: @screen-md-min) {
+  .nav{
+    float: none !important;
+  }
+  .phone-mother-div{
+    text-align: right;
+    margin-top: -48px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: @screen-xs-max) {
+  .phone-mother-div{
+    float: none !important;
+    text-align: center;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
