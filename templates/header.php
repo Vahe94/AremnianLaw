@@ -8,10 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo4.png" class="img-responsive" alt=""></a>
             </div>
-
-            <div class="pull-right phone-mother-div "> <div class="glyphicon glyphicon-earphone phone-icon"></div> <div class="phone-number">(812) 941-82-71</div> </div>
             <div class="col-sm-12 col-md-8">
                 <nav class=" collapse navbar-collapse" role="navigation">
 
