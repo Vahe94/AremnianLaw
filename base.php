@@ -12,8 +12,8 @@ do_action('get_header');
 get_template_part('templates/header');
 ?>
 
-<div class="wrap container" role="document">
-    <div class="content row">
+<div class="wrap <?php if(!is_home()){ echo 'container';};?>" role="document">
+    <div class="content <?php if(!is_home()){ echo 'row';};?>">
         <main class="main" role="main">
             <?php include roots_template_path(); ?>
         </main><!-- /.main -->
