@@ -33,27 +33,21 @@
 
                 // JavaScript to be fired on the home page
 
-                $("#owl-example").owlCarousel({
+                var owl = $("#owl-demo");
 
-                    animateOut: 'slideOutDown',
-
-                    animateIn: 'flipInX',
-
-                    items:1,
-
-                    margin:0,
-
-                    stagePadding:0,
-
-                    smartSpeed:450
-
+                owl.owlCarousel({
+                    items : 10, //10 items above 1000px browser width
+                    itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                    itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                    itemsTablet: [600,2], //2 items between 600 and 0
+                    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
                 });
 
-                $(".btn-danger").click(function(){
-                  var  $i=$(this).parent().children('.caption').html();
-                  $('input[name="hidden_CF"]').val("");
-                  $('input[name="hidden_CF"]').val($i);
-                });
+                //$(".btn-danger").click(function(){
+                //  var  $i=$(this).parent().children('.caption').html();
+                //  $('input[name="hidden_CF"]').val("");
+                //  $('input[name="hidden_CF"]').val($i);
+                //});
 
             }
 
