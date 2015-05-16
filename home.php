@@ -6,9 +6,10 @@ Template Name: Home
 
 <div class="clear-both"></div>
 <div class="container">
-    <div>
+<!--    <div class="col-sm-4 lawyer-05">    </div>-->
+    <div class="col-xs-12">
         <h2>Вардан Хечян</h2>
-        <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit. A ad aspernatur, corporis cupiditate dolor
+        <p class="justify">Lorem ipsum dolor sit amet,consectetur adipisicing elit. A ad aspernatur, corporis cupiditate dolor
             doloremque eligendi eos eum incidunt iure iusto magnam maiores necessitatibus nisi non odit perspiciatis
             placeat possimus quam quis quisquam, repellat reprehenderit sit temporibus totam vel vitae. A, accusamus
             alias aliquam amet, cum debitis ducimus ea harum illo iure laborum magnam maiores neque perspiciatis provident

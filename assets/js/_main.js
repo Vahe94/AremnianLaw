@@ -22,7 +22,37 @@
         // All pages
         common: {
             init: function() {
+
                 // JavaScript to be fired on all pages
+                $("#scroll-to-top").click(function(){
+                    $("html, body").animate({ scrollTop: 0 });
+                    return false;
+                    });
+                $(window).scroll(function() {
+                    var scrollTop = $(window).scrollTop();
+                        if(scrollTop>30){
+                            $("#scroll-to-top").css('display','block');
+                        }else{
+                            $("#scroll-to-top").css('display','none');
+                        }
+                });
+                var owl = $("#owl-demo");
+
+                owl.owlCarousel({
+                    items :7, //7 items above 1000px browser width
+                    itemsDesktop : [1000,5], //5 items between 1000px and 901px
+                    itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                    itemsTablet: [600,2], //2 items between 600 and 0
+                    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+                });
+
+
+                //$(".btn-danger").click(function(){
+                //  var  $i=$(this).parent().children('.caption').html();
+                //  $('input[name="hidden_CF"]').val("");
+                //  $('input[name="hidden_CF"]').val($i);
+                //});
+
             }
         },
         // Home page
@@ -33,21 +63,6 @@
 
                 // JavaScript to be fired on the home page
 
-                var owl = $("#owl-demo");
-
-                owl.owlCarousel({
-                    items : 10, //10 items above 1000px browser width
-                    itemsDesktop : [1000,5], //5 items between 1000px and 901px
-                    itemsDesktopSmall : [900,3], // betweem 900px and 601px
-                    itemsTablet: [600,2], //2 items between 600 and 0
-                    itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-                });
-
-                //$(".btn-danger").click(function(){
-                //  var  $i=$(this).parent().children('.caption').html();
-                //  $('input[name="hidden_CF"]').val("");
-                //  $('input[name="hidden_CF"]').val($i);
-                //});
 
             }
 
