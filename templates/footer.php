@@ -97,7 +97,14 @@
                <p> © 2015. Юридический центр «Адвокат Вардан Хечяан»</p>
                <p> +(374)10 32-02-02</p>
                <p> advokat@advokat.am</p>
-            </div><div class="footer-left-logo col-lg-3">
+
+                <div class="disclaimer-div">
+                    <a href="#" class="float-left disclaimer"> Disclaimer &nbsp;|</a>
+
+                    <a href="#" class="float-left disclaimer">&nbsp; Terms&Conditions </a>
+                </div>
+            </div>
+                <div class="footer-left-logo col-lg-3">
 
                     <div class="col-xs-12">
                         <p class="follow-icons"></p>
@@ -125,12 +132,6 @@
 
             </div>
         </div>
-            <hr/>
-            <div class="disclaimer-div">
-                <a href="#" class="float-left disclaimer"> Disclaimer &nbsp;|</a>
-
-                <a href="#" class="float-left disclaimer">&nbsp; Terms&Conditions </a>
-            </div>
         </div>
     </div>
 </footer>
