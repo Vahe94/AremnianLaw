@@ -11,60 +11,7 @@
                     <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
                     <p class="text-center">Lorem ipsum.</p>
                 </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico1.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico1.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/calc_icon.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico1.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico3.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico1.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico1.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico3.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico3.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico3.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico3.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
+
 <!--                <div class="owl-controls clickable">-->
 <!--                    <div class="owl-buttons">-->
 <!--                        <div class="owl-prev">-->
@@ -105,17 +52,16 @@
                 </div>
             </div>
                 <div class="footer-left-logo col-lg-3">
-
                     <div class="col-xs-12">
-                        <p class="follow-icons"></p>
-                        <p class="follow-icons"> </p>
-                        <p class="follow-icons"> </p>
+                        <div id="follow-icons-fb" class="col-xs-4 follow-icons"></div>
+                        <div id="follow-icons-tw" class="col-xs-4 follow-icons"></div>
+                        <div id="follow-icons-in" class="col-xs-4 follow-icons"></div>
                     </div>
-                        <div class="col-xs-12">
-                            <p class="follow-icons"> </p>
-                            <p class="follow-icons"> </p>
-                            <p class="follow-icons"> </p>
-                        </div>
+                    <div class="col-xs-12">
+                        <div id="follow-icons-gplus" class="follow-icons col-xs-4"></div>
+                        <div id="follow-icons-youtube" class="follow-icons col-xs-4"></div>
+                        <div id="follow-icons-skype" class="follow-icons col-xs-4"></div>
+                    </div>
             </div>
             <div class="footer-right-menu col-lg-4">
                 <?php

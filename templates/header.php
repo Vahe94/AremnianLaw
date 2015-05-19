@@ -26,7 +26,7 @@
     </div>
 
     <div class="wrap  main-container" role="document">
-        <div class="content border-bottom6">
+        <div class="content border-bottom6 advocate_pic">
             <div class="container">
                 <div class="col-lg-4 col-sm-12">
                     <div class="attorney_at_law"></div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-12">
-                    <div class="advocate_pic"></div>
+                    <div class=""></div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
                     <div class="addres-mail">

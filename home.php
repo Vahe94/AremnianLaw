@@ -29,66 +29,30 @@ Template Name: Home
     <div class="row">
         <div class="welcome-our-site-div"><span class="welcome-our-site-span">Добро пожаловать на сайт</span></div>
         <div class="row text-center">
+            <?php $query = new WP_Query(array('category_name' => 'welcome'));
+
+            if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+
             <div class="col-sm-6 col-md-3">
                 <div class="thumbnail bg-purple">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                        totam.</p>
+                    <p class=welcome-header><?php echo CFS()->get('welcome_header'); ?></p>
 
-                    <div class="thumb under-thumbnail-margin"><img width="69" height="71"
-                                                                   src="http://dev1.smartproductionllc.com/wp-content/uploads/2014/12/clock.png"
-                                                                   class="attachment-medium wp-post-image" alt="clock">
-                    </div>
+                    <div class="thumb under-thumbnail-margin"> <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'thumbnail'); ?></a> </div>
                     <div class="caption">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                            totam.</p>
+                        <p><?php echo CFS()->get('welcome_footer'); ?><a href="<? the_permalink(); ?>"><? _e(' (читать дальше...)')?></a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="thumbnail bg-purple">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                        totam.</p>
+            <?
+            endwhile;
 
-                    <div class="thumb under-thumbnail-margin"><img width="69" height="71"
-                                                                   src="http://dev1.smartproductionllc.com/wp-content/uploads/2014/12/clock.png"
-                                                                   class="attachment-medium wp-post-image" alt="clock">
-                    </div>
-                    <div class="caption">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                            totam.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="thumbnail bg-purple">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                        totam.</p>
+            endif;
 
-                    <div class="thumb under-thumbnail-margin"><img width="69" height="71"
-                                                                   src="http://dev1.smartproductionllc.com/wp-content/uploads/2014/12/clock.png"
-                                                                   class="attachment-medium wp-post-image" alt="clock">
-                    </div>
-                    <div class="caption">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                            totam.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="thumbnail bg-purple">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                        totam.</p>
+            // Reset Query
 
-                    <div class="thumb under-thumbnail-margin"><img width="69" height="71"
-                                                                   src="http://dev1.smartproductionllc.com/wp-content/uploads/2014/12/clock.png"
-                                                                   class="attachment-medium wp-post-image" alt="clock">
-                    </div>
-                    <div class="caption">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at, commodi fugit ipsam sit
-                            totam.</p>
-                    </div>
-                </div>
-            </div>
+            //wp_reset_query();
+
+            ?>
         </div>
     </div>
 
@@ -104,7 +68,36 @@ Template Name: Home
                             <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'medium'); ?></a>
                         </div>
                             <div class="caption">
-                                <p><?php the_date(); ?></p>
+                                <p><?php get_the_date(); ?></p>
+                                <a href="<? the_permalink(); ?>"><p><?php the_title() ?></p></a>
+                            </div>
+                    </div>
+                <?
+                endwhile;
+
+                endif;
+
+                // Reset Query
+
+                //wp_reset_query();
+
+                ?>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2 class="publics-title"><a href=""> Наши новости</a></h2>
+        <div id="publications">
+            <div class="row">
+                <?php $query = new WP_Query(array('category_name' => 'news'));
+                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'medium'); ?></a>
+                        </div>
+                            <div class="caption">
+                                <p><?php get_the_date(); ?></p>
                                 <a href="<? the_permalink(); ?>"><p><?php the_title() ?></p></a>
                             </div>
                     </div>
@@ -128,18 +121,18 @@ Template Name: Home
             <div class="row">
                 <?php $query = new WP_Query(array('category_name' => 'videos'));
 
-                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();  $date= the_date();?>
-
+                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+                    $post_id=get_the_ID();?>
                     <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="thumbnail">
-                            <a href="<? the_permalink(); ?>">
+                            <a href="/video?id=<? echo $post_id ?>">
                                 <? echo get_the_post_thumbnail($id, 'medium'); ?>
 <!--                                <iframe width="853" height="480" src="--><?php //echo CFS()->get('tipe_video_url_here'); ?><!--" frameborder="0" allowfullscreen></iframe>-->
                                 <span class="video-play-icon"></span>
                             </a>
                         </div>
                             <div class="caption">
-                                <p><? echo $date?></p>
+                                <p><? echo get_the_date() ?></p>
                                 <a href="<? the_permalink(); ?>"><p><?php the_title() ?></p></a>
                             </div>
                     </div>
