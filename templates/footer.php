@@ -1,25 +1,122 @@
 <footer class="content-info" role="contentinfo">
     <div class="container">
+
+        <div class="row">
+            <h2 class="publics-title"><a href=""> Публикации</a></h2>
+            <div id="publications">
+                <div class="row">
+                    <?php $query = new WP_Query(array('category_name' => 'publications'));
+                    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="thumbnail">
+                                <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'medium'); ?></a>
+                            </div>
+                            <div class="caption">
+                                <p><?php get_the_date(); ?></p>
+                                <a href="<? the_permalink(); ?>"><p><?php the_title() ?></p></a>
+                            </div>
+                        </div>
+                    <?
+                    endwhile;
+
+                    endif;
+
+                    // Reset Query
+
+                    //wp_reset_query();
+
+                    ?>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="publics-title"><a href=""> Наши новости</a></h2>
+            <div id="publications">
+                <div class="row">
+                    <?php $query = new WP_Query(array('category_name' => 'news'));
+                    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="thumbnail">
+                                <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'medium'); ?></a>
+                            </div>
+                            <div class="caption">
+                                <p><?php get_the_date(); ?></p>
+                                <a href="<? the_permalink(); ?>"><p><?php the_title() ?></p></a>
+                            </div>
+                        </div>
+                    <?
+                    endwhile;
+
+                    endif;
+
+                    // Reset Query
+
+                    //wp_reset_query();
+
+                    ?>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="publics-title"><a href="#">Видео</a></h2>
+            <div id="videos">
+                <div class="row">
+                    <?php $query = new WP_Query(array('category_name' => 'videos'));
+
+                    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+                        $post_id=get_the_ID();?>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="thumbnail">
+                                <a href="/video?id=<? echo $post_id ?>">
+                                    <? echo get_the_post_thumbnail($id, 'medium'); ?>
+                                    <!--                                <iframe width="853" height="480" src="--><?php //echo CFS()->get('tipe_video_url_here'); ?><!--" frameborder="0" allowfullscreen></iframe>-->
+                                    <span class="video-play-icon"></span>
+                                </a>
+                            </div>
+                            <div class="caption">
+                                <p><? echo get_the_date() ?></p>
+                                <a href="<? the_permalink(); ?>"><p><?php the_title() ?></p></a>
+                            </div>
+                        </div>
+                    <?
+
+                    endwhile;
+
+                    endif;
+
+                    // Reset Query
+
+                    //wp_reset_query();
+
+                    ?>
+
+                </div>
+            </div>
+        </div>
         <div class="row ">
             <div class="welcome-our-site-div"><span class="welcome-our-site-span">Наши услуги</span></div>
             <?php/* dynamic_sidebar('sidebar-footer'); */?>
             <div id="owl-demo" class="owl-carousel owl-theme">
+                <?php $query = new WP_Query(array('category_name' => 'services'));
+                $k=0;
+                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();?>
+                        <? if($k==0) echo'<div class="item">'; $k++;?>
+                        <? echo the_post_thumbnail('medium'); ?>
+                        <p class="text-center"><a href="<? the_permalink(); ?>"> <?php the_title() ?></a></p>
+                <? if($k==2){ echo'</div>'; $k=0;}?>
+                <?
 
-                <div class="item">
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/home_icon.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                    <h1> <img src="wp-content/themes/ArmenianLaw/assets/img/ico2.png" width="70" height="70"></h1>
-                    <p class="text-center">Lorem ipsum.</p>
-                </div>
+                endwhile;
 
-<!--                <div class="owl-controls clickable">-->
-<!--                    <div class="owl-buttons">-->
-<!--                        <div class="owl-prev">-->
-<!--                            <img class="right-left" src="http://armenianlaw.com/wp-content/uploads/2015/02/left.png" width="50" height="50"></div>-->
-<!--                        <div class="owl-next">-->
-<!--                            <img class="right-left" src="http://armenianlaw.com/wp-content/uploads/2015/02/right.png" width="50" height="50"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                endif;
+
+                // Reset Query
+
+                //wp_reset_query();
+                if($k!=0) echo '</div>';
+                ?>
             </div>
 
         </div>
