@@ -16,7 +16,7 @@ Template Name: Home
     <div class="row">
         <div class="welcome-our-site-div"><span class="welcome-our-site-span">Добро пожаловать на сайт</span></div>
         <div class="row text-center">
-            <?php $query = new WP_Query(array('category_name' => 'welcome'));
+            <?php $query = new WP_Query(array('category_name' => 'welcome','posts_per_page' => 4));
 
             if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 

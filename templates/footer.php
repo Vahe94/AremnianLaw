@@ -9,7 +9,7 @@
             <h2 class="publics-title"><a href="<?=$category_link;?>"> Публикации</a></h2>
             <div id="publications">
                 <div class="row">
-                    <?php $query = new WP_Query(array('category_name' => 'publications'));
+                    <?php $query = new WP_Query(array('category_name' => 'publications','posts_per_page' => 4));
                     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="thumbnail">
@@ -42,7 +42,7 @@
             <h2 class="publics-title"><a href="<?=$category_link;?>"> Наши новости</a></h2>
             <div id="publications">
                 <div class="row">
-                    <?php $query = new WP_Query(array('category_name' => 'news'));
+                    <?php $query = new WP_Query(array('category_name' => 'news','posts_per_page' => 4));
                     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="thumbnail">
@@ -71,7 +71,7 @@
             <h2 class="publics-title"><a href="#">Видео</a></h2>
             <div id="videos">
                 <div class="row">
-                    <?php $query = new WP_Query(array('category_name' => 'videos'));
+                    <?php $query = new WP_Query(array('category_name' => 'videos','posts_per_page' => 4));
 
                     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                         $post_id=get_the_ID();?>
