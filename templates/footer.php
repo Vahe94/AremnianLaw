@@ -101,10 +101,10 @@
             <div id="owl-demo" class="owl-carousel owl-theme">
                 <?php $query = new WP_Query(array('category_name' => 'services'));
                 $k=0;
-                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();?>
+                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();$post_id=get_the_ID();?>
                         <? if($k==0) echo'<div class="item">'; $k++;?>
                         <? echo the_post_thumbnail('medium'); ?>
-                <a href="<? the_permalink(); ?>"><p class="text-center"> <?php the_title() ?></p></a>
+                <a href="/services?id=<? echo $post_id ?>"><p class="text-center"> <?php the_title() ?></p></a>
                 <? if($k==2){ echo'</div>'; $k=0;}?>
                 <?
 
