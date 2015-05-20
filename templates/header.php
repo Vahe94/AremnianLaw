@@ -17,10 +17,7 @@
                 </button>
             </div>
             <div class="col-sm-12 col-md-6" style="margin-top:15px;">
-
-                <div class="language-icons">Հայ</div>
-                <div class="language-icons">Eng</div>
-                <div class="language-icons language-active">Рус</div>
+                <?php do_action('icl_language_selector'); ?>
             </div>
         </div>
     </div>

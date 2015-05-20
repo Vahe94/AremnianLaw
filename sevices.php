@@ -7,13 +7,14 @@ Template Name: services
     <div class="welcome-our-site-div"><span class="welcome-our-site-span">Наши услуги</span></div>
 </div>
 <div class="col-sm-4 services_left_side">
-    <?php $query = new WP_Query(array('category_name' => 'services'));
-    $id_get=($_GET["id"]);
+    <div class="list-group">
+    <?php $id_get=($_GET["id"]);
+    $query = new WP_Query(array('category_name' => 'services'));
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();;?>
         <div class="float-left"> <? echo the_post_thumbnail('thumbnail'); ?></div>
     <div class="float-left"><a href="/services?id=<? echo $post_id ?>"><p class="text-center"> <?php the_title() ?></p></a></div>
     <?
-
+            <a href="#" class="list-group-item">Vestibulum at eros</a>
     endwhile;
 
     endif;

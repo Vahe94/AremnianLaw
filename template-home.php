@@ -8,20 +8,7 @@ Template Name: Home
 <div class="container">
     <!--    <div class="col-sm-4 lawyer-05">    </div>-->
     <div class="col-xs-12">
-        <h2>Вардан Хечян</h2>
-
-        <p class="justify">Lorem ipsum dolor sit amet,consectetur adipisicing elit. A ad aspernatur, corporis cupiditate
-            dolor
-            doloremque eligendi eos eum incidunt iure iusto magnam maiores necessitatibus nisi non odit perspiciatis
-            placeat possimus quam quis quisquam, repellat reprehenderit sit temporibus totam vel vitae. A, accusamus
-            alias aliquam amet, cum debitis ducimus ea harum illo iure laborum magnam maiores neque perspiciatis
-            provident
-            temporibus vel? Alias deserunt earum expedita fuga hic illo ipsum laboriosam laborum maiores, minus modi
-            nisi
-            perferendis qui, repellat repellendus sequi similique soluta voluptatum. Ab accusantium
-            autem ex exercitationem, expedita fugit harum, illo illum impedit ipsa, ipsam libero nulla pariatur saepe
-            ullam.
-        </p>
+        <? the_content(); ?>
     </div>
 </div>
 <div class="clear-both"></div>
