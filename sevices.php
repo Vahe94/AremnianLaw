@@ -3,61 +3,34 @@
 Template Name: services
 */
 ?>
+
+<div class="welcome-our-site-div"><span class="welcome-our-site-span">Наши услуги</span></div>
 <div class="row ">
-    <div class="welcome-our-site-div"><span class="welcome-our-site-span">Наши услуги</span></div>
-</div>
-<div class="col-sm-4 services_left_side">
+<div class="col-sm-4">
     <div class="list-group">
-    <?php $id_get=($_GET["id"]);
+    <?php
     $query = new WP_Query(array('category_name' => 'services'));
-        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();;?>
-        <div class="float-left"> <? echo the_post_thumbnail('thumbnail'); ?></div>
-    <div class="float-left"><a href="/services?id=<? echo $post_id ?>"><p class="text-center"> <?php the_title() ?></p></a></div>
+    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();?>
+        <a href="/services?id=<? echo the_ID(); ?>" class="list-group-item <?=($_GET["id"]==get_the_ID())?'active':'';?>"><? echo the_post_thumbnail(array(40, 40)); ?> <? the_title(); ?></a>
     <?
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
     endwhile;
-
     endif;
-
     // Reset Query
-
     //wp_reset_query();
     ?>
+    </div>
 </div>
 <div class="col-sm-8">
-    <?php
-    $id_get=($_GET["id"]);
-    if($id_get!="0"){
-        $query = new WP_Query("p=$id_get");
-        if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post() ;
-            ?>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <div class="caption">
-                    <h2><?php the_content() ?></h2>
-                </div>
+    <?
+    $post = get_post($_GET["id"]);
+    ?>
+        <article>
+            <header>
+                <h2 class="entry-title mt0"><? echo $post->post_title; ?></h2>
+            </header>
+            <div class="entry-content">
+                <? echo $post->post_content; ?>
             </div>
-        <?
-
-        endwhile;
-
-        endif;
-
-        // Reset Query
-
-        //wp_reset_query();
-
-
-    }
-  ?>
-
-
-endwhile;
-
-endif;
-
-// Reset Query
-
-//wp_reset_query();
-if($k!=0) echo '</div>';
-?>
+        </article>
+</div>
 </div>

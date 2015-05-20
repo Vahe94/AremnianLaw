@@ -2,7 +2,11 @@
     <div class="container">
 
         <div class="row">
-            <h2 class="publics-title"><a href=""> Публикации</a></h2>
+            <?
+            $category_id = get_cat_ID( 'publications' );
+            $category_link = get_category_link( $category_id );
+            ?>
+            <h2 class="publics-title"><a href="<?=$category_link;?>"> Публикации</a></h2>
             <div id="publications">
                 <div class="row">
                     <?php $query = new WP_Query(array('category_name' => 'publications'));
@@ -31,7 +35,11 @@
             </div>
         </div>
         <div class="row">
-            <h2 class="publics-title"><a href=""> Наши новости</a></h2>
+            <?
+            $category_id = get_cat_ID( 'news' );
+            $category_link = get_category_link( $category_id );
+            ?>
+            <h2 class="publics-title"><a href="<?=$category_link;?>"> Наши новости</a></h2>
             <div id="publications">
                 <div class="row">
                     <?php $query = new WP_Query(array('category_name' => 'news'));
