@@ -104,7 +104,7 @@
                 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();?>
                         <? if($k==0) echo'<div class="item">'; $k++;?>
                         <? echo the_post_thumbnail('medium'); ?>
-                        <p class="text-center"><a href="<? the_permalink(); ?>"> <?php the_title() ?></a></p>
+                <a href="<? the_permalink(); ?>"><p class="text-center"> <?php the_title() ?></p></a>
                 <? if($k==2){ echo'</div>'; $k=0;}?>
                 <?
 
