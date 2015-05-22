@@ -1,21 +1,6 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
     <div class="container">
         <div class="row">
-            <div class=" col-md-6 navbar-header search_line" >
-                <div class="col-xs-6 white-color search-text">
-                    Lorem ipsum dolor sit amet
-                </div>
-                <div class="input-group col-xs-6">
-                    <input type="text" class="form-control" placeholder="search">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                </div>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
             <div class="col-sm-12 col-md-6" style="margin-top:15px;">
                 <?php do_action('icl_language_selector'); ?>
             </div>
@@ -29,19 +14,17 @@
                     <div class="attorney_at_law"></div>
                     <div id="navigation">
                         <nav class=" collapse navbar-collapse" role="navigation">
-                            <div class="col-xs-12">
-                                <?php
-                                if (has_nav_menu('primary_navigation')) :
-                                    wp_nav_menu(
-                                        array(
-                                            'theme_location' => 'primary_navigation',
-                                            'walker' => new Roots_Nav_Walker(),
-                                            'menu_class' => 'menu-items-ul'
-                                        )
-                                    );
-                                endif;
-                                ?>
-                            </div>
+                            <?php
+                            if (has_nav_menu('primary_navigation')) :
+                                wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'primary_navigation',
+                                        'walker' => new Roots_Nav_Walker(),
+                                        'menu_class' => 'menu-items-ul'
+                                    )
+                                );
+                            endif;
+                            ?>
                         </nav>
                     </div>
                 </div>
@@ -58,6 +41,7 @@
                     </div>
 <!--                    <div class="callback">Обратный звонок</div>-->
                     <div>
+                        <h3><b>Вардан Хечян</b></h3>
                         <ul class="header-ul-about">
                             <li>Адвокат</li>
                             <li>Президент представительства Международного Союза (Содружества) адвокатов</li>

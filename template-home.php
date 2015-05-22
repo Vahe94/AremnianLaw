@@ -5,12 +5,7 @@ Template Name: Home
 ?>
 
 <div class="clear-both"></div>
-<div class="container">
-    <!--    <div class="col-sm-4 lawyer-05">    </div>-->
-    <div class="col-xs-12">
-        <? the_content(); ?>
-    </div>
-</div>
+<? the_content(); ?>
 <div class="clear-both"></div>
 <div class="container welcome">
     <div class="row">
