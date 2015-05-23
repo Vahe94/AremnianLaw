@@ -2,7 +2,7 @@
 <div class="row">
     <? if (have_posts()) : while (have_posts()) : the_post();?>
     <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail thumbnail-height">
             <? the_post_thumbnail('medium'); ?>
             <div class="caption">
                 <h4><? the_title(); ?></h4>
