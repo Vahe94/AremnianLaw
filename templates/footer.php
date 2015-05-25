@@ -54,8 +54,15 @@
                 ?>
             </div>
         </div>
-        <div id="videos">
-            <h2 class="publics-title"><hr><a href="<?=$category_link;?>"><span class="left-span">•</span>Видео<span class="right-span">•</span></a></h2>
+        <div id="videos" class="mbot-15">
+            <?
+            $category_id = get_cat_ID( 'videos' );
+            $category_link = get_category_link( $category_id );
+            ?>
+            <h2 class="publics-title">
+                <hr><a><span class="left-span">•</span>Видео<span class="right-span">•</span></a>
+                <a href="<?=$category_link;?>" class="btn btn-default btn-all-posts btn-xs">Все видео</a>
+            </h2>
             <div class="row">
                 <?php $query = new WP_Query(array('category_name' => 'videos','posts_per_page' => 4));
                 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
@@ -106,19 +113,19 @@
                     <a href="#" class="float-left disclaimer">&nbsp; Terms&Conditions </a>
                 </div>
             </div>
-                <div class="footer-left-logo col-lg-3">
-                    <div class="col-xs-12">
-                        <div id="follow-icons-fb" class="col-xs-4 follow-icons"></div>
-                        <div id="follow-icons-tw" class="col-xs-4 follow-icons"></div>
-                        <div id="follow-icons-in" class="col-xs-4 follow-icons"></div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div id="follow-icons-gplus" class="follow-icons col-xs-4"></div>
-                        <div id="follow-icons-youtube" class="follow-icons col-xs-4"></div>
-                        <div id="follow-icons-skype" class="follow-icons col-xs-4"></div>
-                    </div>
+            <div class="footer-left-logo col-lg-3">
+                <div class="col-xs-12">
+                    <div id="follow-icons-fb" class="col-xs-4 follow-icons"></div>
+                    <div id="follow-icons-tw" class="col-xs-4 follow-icons"></div>
+                    <div id="follow-icons-in" class="col-xs-4 follow-icons"></div>
+                </div>
+                <div class="col-xs-12">
+                    <div id="follow-icons-gplus" class="follow-icons col-xs-4"></div>
+                    <div id="follow-icons-youtube" class="follow-icons col-xs-4"></div>
+                    <div id="follow-icons-skype" class="follow-icons col-xs-4"></div>
+                </div>
             </div>
-            <div class="footer-right-menu col-lg-4">
+            <div class="footer-left-logo col-lg-4">
                 <?php
                 if (has_nav_menu('primary_navigation')) :
                     wp_nav_menu(

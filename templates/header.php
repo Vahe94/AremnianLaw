@@ -1,9 +1,7 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 languages_div" >
-                <?php do_action('icl_language_selector'); ?>
-            </div>
+        <div class="languages_div" >
+            <?php do_action('icl_language_selector'); ?>
         </div>
     </div>
 
