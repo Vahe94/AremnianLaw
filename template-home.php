@@ -12,7 +12,7 @@ Template Name: Home
         <div class="welcome-our-site-div"><span class="welcome-our-site-span">Наши услуги</span></div>
         <?php/* dynamic_sidebar('sidebar-footer'); */?>
         <div id="owl-demo" class="owl-carousel owl-theme">
-            <?php $query = new WP_Query(array('category_name' => 'services'));
+            <?php $query = new WP_Query(array('category_name' => 'services','posts_per_page' => 50));
             $k=0;
             if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();$post_id=get_the_ID();?>
                 <? if($k==0) echo'<div class="item">'; $k++;?>
