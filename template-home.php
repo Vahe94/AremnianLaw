@@ -20,19 +20,14 @@ Template Name: Home
                 <a href="/services?id=<? echo $post_id ?>"><p class="text-center"> <?php the_title() ?></p></a>
                 <? if($k==2){ echo'</div>'; $k=0;}?>
             <?
-
             endwhile;
-
             endif;
-
             // Reset Query
-
             //wp_reset_query();
             if($k!=0) echo '</div>';
             ?>
         </div>
-
-        <div class="welcome-our-site-div"><span class="welcome-our-site-span"><?php echo CFS()->get('slogan'); ?></span></div>
+        <div class="welcome-our-site-div"><span class="welcome-our-site-span"><?php echo CFS()->get('our_slogan'); ?></span></div>
         <div class="row text-center">
             <?php $query = new WP_Query(array('category_name' => 'welcome','posts_per_page' => 4));
 
@@ -40,8 +35,7 @@ Template Name: Home
 
                 <div class="col-sm-6 col-md-3">
                     <div class="thumbnail bg-purple">
-                        <p class=welcome-header><?php echo CFS()->get('welcome_header'); ?></p>
-
+                        <p class=welcome-header> <?php echo CFS()->get('welcome_header'); ?></p>
                         <div class="thumb under-thumbnail-margin"> <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'thumbnail'); ?></a> </div>
                         <div class="caption">
                             <p><?php echo CFS()->get('welcome_footer'); ?><a href="<? the_permalink(); ?>"><? _e(' (читать далее...)')?></a></p>
