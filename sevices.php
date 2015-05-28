@@ -5,7 +5,7 @@ Template Name: services
 ?>
 
 <div class="welcome-our-site-div"><span class="welcome-our-site-span">Наши услуги</span></div>
-<div class="row ">
+
 <div class="col-sm-4">
     <div class="list-group">
     <?php
@@ -32,5 +32,4 @@ Template Name: services
                 <? echo $post->post_content; ?>
             </div>
         </article>
-</div>
 </div>

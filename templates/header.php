@@ -8,8 +8,8 @@
     <div class="wrap  main-container" role="document">
         <div class="content border-bottom6 advocate_pic">
             <div class="container">
-                <div class="col-lg-4 col-sm-12">
-                    <div class="attorney_at_law"></div>
+                <div class="col-xs-4">
+                    <a href="<?php echo get_site_url(); ?>"> <div class="attorney_at_law"></div></a>
                     <div id="navigation">
                         <nav class=" collapse navbar-collapse" role="navigation">
                             <?php
@@ -26,10 +26,10 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-5 col-sm-12">
+                <div class="col-lg-5 col-xs-4">
                     <div class=""></div>
                 </div>
-                <div class="col-lg-3 col-sm-12">
+                <div class="col-lg-3 col-xs-4">
                     <div class="addres-mail">
                         <div class="header-contacts">
                             <div class="header-contacts-phone">+(374)10 32-02-02</div>

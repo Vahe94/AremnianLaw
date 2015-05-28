@@ -12,7 +12,7 @@
             <div class="row">
                 <?php $query = new WP_Query(array('category_name' => 'publications','posts_per_page' => 4));
                 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="col-md-3 col-sm-4 col-xs-6 posts" onclick="window.location.href='<? the_permalink(); ?>'">
+                    <div class="col-xs-3 posts" onclick="window.location.href='<? the_permalink(); ?>'">
                         <p class="date"><?php echo get_the_date(); ?></p>
                         <div class="thumbnail">
                             <? echo get_the_post_thumbnail($id, 'medium'); ?>
@@ -39,7 +39,7 @@
             <div class="row">
                 <?php $query = new WP_Query(array('category_name' => 'news','posts_per_page' => 4));
                 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="col-md-3 col-sm-4 col-xs-6 posts" onclick="window.location.href='<? the_permalink(); ?>'">
+                    <div class="col-xs-3 posts" onclick="window.location.href='<? the_permalink(); ?>'">
                         <p class="date"><?php echo get_the_date(); ?></p>
                         <div class="thumbnail">
                             <? echo get_the_post_thumbnail($id, 'medium'); ?>
@@ -67,7 +67,7 @@
                 <?php $query = new WP_Query(array('category_name' => 'videos','posts_per_page' => 4));
                 if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                     $post_id=get_the_ID();?>
-                    <div class="col-md-3 col-sm-4 col-xs-6 posts-video">
+                    <div class="col-xs-3 posts-video">
                         <p class="date"><?php echo get_the_date(); ?></p>
                         <div class="thumbnail">
                             <a href="/video?id=<? echo $post_id ?>" class="video-play">
@@ -102,7 +102,7 @@
     <div class="footer-under-div">
         <div class="container">
             <div class="row">
-            <div class="footer-left-logo col-lg-5">
+            <div class="footer-left-logo col-xs-5">
                <p> © 2015. Юридический центр «Адвокат Вардан Хечяан»</p>
                <p> +(374)10 32-02-02</p>
                <p> advokat@advokat.am</p>
@@ -113,7 +113,7 @@
                     <a href="#" class="float-left disclaimer">&nbsp; Terms&Conditions </a>
                 </div>
             </div>
-            <div class="footer-left-logo col-lg-3">
+            <div class="footer-left-logo col-xs-3">
                 <div class="col-xs-12">
                     <div id="follow-icons-fb" class="col-xs-4 follow-icons"></div>
                     <div id="follow-icons-tw" class="col-xs-4 follow-icons"></div>
@@ -125,7 +125,7 @@
                     <div id="follow-icons-skype" class="follow-icons col-xs-4"></div>
                 </div>
             </div>
-            <div class="footer-left-logo col-lg-4">
+            <div class="footer-left-logo col-xs-4">
                 <?php
                 if (has_nav_menu('primary_navigation')) :
                     wp_nav_menu(
