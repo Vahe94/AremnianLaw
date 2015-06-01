@@ -27,6 +27,7 @@ Template Name: video
         </div>
     </div>
 </div>
+<div class="clear-both"></div>
 <nav class="text-center">
     <?
     global $wp_query;

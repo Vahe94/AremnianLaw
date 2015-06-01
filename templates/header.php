@@ -9,7 +9,7 @@
         <div class="content border-bottom6 advocate_pic">
             <div class="container">
                 <div class="col-xs-4">
-                    <a href="<?php echo get_site_url(); ?>"> <div class="attorney_at_law"></div></a>
+                    <a href="<?php echo get_home_url(); ?>"> <div class="attorney_at_law"></div></a>
                     <div id="navigation">
                         <nav class=" collapse navbar-collapse" role="navigation">
                             <?php

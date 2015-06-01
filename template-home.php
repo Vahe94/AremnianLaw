@@ -16,8 +16,7 @@ Template Name: Home
             $k=0;
             if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();$post_id=get_the_ID();?>
                 <? if($k==0) echo'<div class="item">'; $k++;?>
-            <a href="/services?id=<? echo $post_id ?>"><? echo the_post_thumbnail('medium'); ?></a>
-                <a href="/services?id=<? echo $post_id ?>"><p class="text-center"> <?php the_title() ?></p></a>
+            <a href="<? the_permalink(); ?>"><? echo the_post_thumbnail('medium'); ?><p class="text-center min-height-text"> <?php the_title() ?></p></a>
                 <? if($k==2){ echo'</div>'; $k=0;}?>
             <?
             endwhile;
@@ -26,6 +25,10 @@ Template Name: Home
             //wp_reset_query();
             if($k!=0) echo '</div>';
             ?>
+        </div>
+        <div class="customNavigation">
+            <a class="btn prev">&laquo;</a>
+            <a class="btn next">&raquo;</a>
         </div>
         <div class="welcome-our-site-div">
             <span class="welcome-our-site-span">
@@ -44,7 +47,7 @@ Template Name: Home
                         <p class=welcome-header> <?php echo CFS()->get('welcome_header'); ?></p>
                         <div class="thumb under-thumbnail-margin"> <a href="<? the_permalink(); ?>"><? echo get_the_post_thumbnail($id, 'thumbnail'); ?></a> </div>
                         <div class="caption">
-                            <p><?php echo CFS()->get('welcome_footer'); ?><a href="<? the_permalink(); ?>"><? _e(' (читать далее...)')?></a></p>
+                            <p><?php echo CFS()->get('welcome_footer'); ?><a href="<? the_permalink(); ?>"><br><? _e(' (читать далее...)')?></a></p>
                         </div>
                     </div>
                 </div>
