@@ -65,12 +65,11 @@
             </h2>
             <div class="row">
                 <?php $query = new WP_Query(array('category_name' => 'videos','posts_per_page' => 4));
-                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-                    $post_id=get_the_ID();?>
+                if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();?>
                     <div class="col-xs-3 posts-video">
                         <p class="date"><?php echo get_the_date(); ?></p>
                         <div class="thumbnail">
-                            <a href="/video?id=<? echo $post_id ?>" class="video-play">
+                            <a href="<? the_permalink(); ?>" class="video-play">
                                 <? echo get_the_post_thumbnail($id, 'medium'); ?>
                                 <!--                                <iframe width="853" height="480" src="--><?php //echo CFS()->get('tipe_video_url_here'); ?><!--" frameborder="0" allowfullscreen></iframe>-->
                                 <span class="video-play-icon"></span>
@@ -103,9 +102,7 @@
         <div class="container">
             <div class="row">
             <div class="footer-left-logo col-xs-5">
-               <p> © 2015. Юридический центр «Адвокат Вардан Хечяан»</p>
-               <p> +(374)10 32-02-02</p>
-               <p> advokat@advokat.am</p>
+                <?php dynamic_sidebar('sidebar-footer'); ?>
 
                 <div class="disclaimer-div">
                     <a href="#" class="float-left disclaimer"> Disclaimer &nbsp;|</a>

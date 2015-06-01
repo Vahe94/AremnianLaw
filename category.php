@@ -1,8 +1,12 @@
-<div class="welcome-our-site-div"><span class="welcome-our-site-span"><?php
-        $category = get_the_category();
-        $cat_name=$category[0]->cat_name;
-        echo $cat_name;
-        ?></span></div>
+<div class="welcome-our-site-div">
+    <span class="welcome-our-site-span">
+        <?php
+            $category = get_the_category();
+            $category_id=$category[0]->cat_ID;
+                echo $category[0]->cat_name;
+        ?>
+    </span>
+</div>
 <div>
     <? if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="col-xs-3 posts thumbnail-height" onclick="window.location.href='<?the_permalink();?>'">
